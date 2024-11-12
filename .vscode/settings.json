@@ -1,0 +1,34 @@
+{
+  "todohighlight.keywords": [
+    {
+      "text": "TODO",
+      "color": "#ffffff",
+      "backgroundColor": "#ffcc00",
+      "overviewRulerColor": "#ffcc00"
+    },
+    {
+      "text": "FIXME",
+      "color": "#ffffff",
+      "backgroundColor": "#ff0033",
+      "overviewRulerColor": "#ff0033"
+    },
+    {
+      "text": "HACK",
+      "color": "#ffffff",
+      "backgroundColor": "#8BA9F8",
+      "overviewRulerColor": "#8BA9F8"
+    },
+    {
+      "text": "NOTE",
+      "color": "#ffffff",
+      "backgroundColor": "#FF7F00",
+      "overviewRulerColor": "#FF7F00"
+    },
+    {
+      "text": "BUG",
+      "color": "#ffffff",
+      "backgroundColor": "#F44336",
+      "overviewRulerColor": "#F44336"
+    }
+  ]
+}
