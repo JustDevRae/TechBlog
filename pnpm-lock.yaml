@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@mdx-js/react':
+        specifier: ^3.1.0
+        version: 3.1.0(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -39,6 +42,15 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.14)
     devDependencies:
+      '@mdx-js/loader':
+        specifier: ^3.1.0
+        version: 3.1.0(acorn@8.14.0)
+      '@next/mdx':
+        specifier: ^15.0.3
+        version: 15.0.3(@mdx-js/loader@3.1.0(acorn@8.14.0))(@mdx-js/react@3.1.0(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028))
+      '@types/mdx':
+        specifier: ^2.0.13
+        version: 2.0.13
       '@types/node':
         specifier: ^20
         version: 20.17.4
@@ -263,6 +275,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
+  '@mdx-js/loader@3.1.0':
+    resolution: {integrity: sha512-xU/lwKdOyfXtQGqn3VnJjlDrmKXEvMi1mgYxVmukEUtVycIz1nh7oQ40bKTd4cA7rLStqu0740pnhGYxGoqsCg==}
+    peerDependencies:
+      webpack: '>=5'
+    peerDependenciesMeta:
+      webpack:
+        optional: true
+
   '@mdx-js/mdx@3.1.0':
     resolution: {integrity: sha512-/QxEhPAvGwbQmy1Px8F899L5Uc2KZ6JtXwlCgJmjSTBedwOZkByYcBG4GceIGPXRDsmfxhHazuS+hlOShRLeDw==}
 
@@ -277,6 +297,17 @@ packages:
 
   '@next/eslint-plugin-next@15.0.2':
     resolution: {integrity: sha512-R9Jc7T6Ge0txjmqpPwqD8vx6onQjynO9JT73ArCYiYPvSrwYXepH/UY/WdKDY8JPWJl72sAE4iGMHPeQ5xdEWg==}
+
+  '@next/mdx@15.0.3':
+    resolution: {integrity: sha512-EwCJKDeJqfbHbsS7rIdWpKDOZsOPsif9AX4PaIhy5ghSMsZvi+/vIZVc07pZT7BdwCIoL9XM1KZMd/vzxCxF5A==}
+    peerDependencies:
+      '@mdx-js/loader': '>=0.15.0'
+      '@mdx-js/react': '>=0.15.0'
+    peerDependenciesMeta:
+      '@mdx-js/loader':
+        optional: true
+      '@mdx-js/react':
+        optional: true
 
   '@next/swc-darwin-arm64@15.0.2':
     resolution: {integrity: sha512-GK+8w88z+AFlmt+ondytZo2xpwlfAR8U6CRwXancHImh6EdGfHMIrTSCcx5sOSBei00GyLVL0ioo1JLKTfprgg==}
@@ -2289,6 +2320,14 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
+  '@mdx-js/loader@3.1.0(acorn@8.14.0)':
+    dependencies:
+      '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
+      source-map: 0.7.4
+    transitivePeerDependencies:
+      - acorn
+      - supports-color
+
   '@mdx-js/mdx@3.1.0(acorn@8.14.0)':
     dependencies:
       '@types/estree': 1.0.6
@@ -2330,6 +2369,13 @@ snapshots:
   '@next/eslint-plugin-next@15.0.2':
     dependencies:
       fast-glob: 3.3.1
+
+  '@next/mdx@15.0.3(@mdx-js/loader@3.1.0(acorn@8.14.0))(@mdx-js/react@3.1.0(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028))':
+    dependencies:
+      source-map: 0.7.4
+    optionalDependencies:
+      '@mdx-js/loader': 3.1.0(acorn@8.14.0)
+      '@mdx-js/react': 3.1.0(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)
 
   '@next/swc-darwin-arm64@15.0.2':
     optional: true
