@@ -1,6 +1,7 @@
 import { getPostBySlug } from "@/lib/mdxParser";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 type PostPageProps = {
   params: {
@@ -26,9 +27,9 @@ export default async function PostPage({ params }: PostPageProps) {
       <p>{frontMatter.date}</p>
       <div>
         {frontMatter.tags?.map((tag: string, index: number) => (
-          <span key={index} className="tag">
-            #{tag}
-          </span>
+          <Link key={index} href={`/tags/${tag}`} passHref>
+            <span className="tag cursor-pointer">#{tag}</span>
+          </Link>
         ))}
       </div>
       <div className="post-content">
