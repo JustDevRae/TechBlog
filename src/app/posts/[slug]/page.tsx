@@ -11,14 +11,11 @@ type PostPageProps = {
 
 export default async function PostPage({ params }: PostPageProps) {
   const { slug } = params;
-
   const post = await getPostBySlug(slug);
-
   if (!post) {
     notFound();
     return null;
   }
-
   const { frontMatter, content } = post;
 
   return (
