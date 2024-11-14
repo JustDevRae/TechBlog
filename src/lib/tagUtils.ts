@@ -1,4 +1,3 @@
-// src/lib/tagUtils.ts
 import { getAllPosts } from './mdxParser';
 
 export function getTagCounts() {

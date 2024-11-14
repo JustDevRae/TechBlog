@@ -11,10 +11,8 @@ type PostPageProps = {
 export default async function PostPage({ params }: PostPageProps) {
   const { slug } = params;
 
-  // 게시글 데이터 가져오기
   const post = await getPostBySlug(slug);
 
-  // 게시글이 존재하지 않으면 404 페이지 표시
   if (!post) {
     notFound();
     return null;
@@ -34,7 +32,6 @@ export default async function PostPage({ params }: PostPageProps) {
         ))}
       </div>
       <div className="post-content">
-        {/* MDX 본문 렌더링 */}
         <MDXRemote source={content} />
       </div>
     </article>

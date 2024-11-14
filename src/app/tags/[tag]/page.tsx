@@ -1,6 +1,5 @@
 import { getAllPosts } from "@/lib/mdxParser";
 
-
 type TagPageProps = {
   params: {
     tag: string;
@@ -11,7 +10,6 @@ export default function TagPage({ params }: TagPageProps) {
   const { tag } = params;
   const posts = getAllPosts();
 
-  // 선택한 태그에 해당하는 게시물 필터링
   const filteredPosts = posts.filter((post) =>
     post.frontMatter.tags.includes(tag)
   );
