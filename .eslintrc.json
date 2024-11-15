@@ -4,6 +4,7 @@
     "airbnb",
     "airbnb-typescript",
     "eslint:recommended",
+    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
@@ -19,9 +20,11 @@
     "react",
     "react-hooks",
     "import",
-    "jsx-a11y"
+    "jsx-a11y",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
