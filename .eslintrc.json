@@ -4,7 +4,9 @@
     "airbnb",
     "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:prettier/recommended",
     "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -22,10 +24,20 @@
     "react/react-in-jsx-scope": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-throw-literal": "off",
     "react/jsx-filename-extension": [
       "error",
       { "extensions": [".tsx", ".jsx"] }
     ],
-    "linebreak-style": ["error", "unix"]
-  }
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "always"],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "lf"
+      }
+    ]
+  },
+  "ignorePatterns": ["postcss.config.mjs"]
 }

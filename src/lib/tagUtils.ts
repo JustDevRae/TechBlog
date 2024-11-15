@@ -1,4 +1,4 @@
-import { getAllPosts } from './mdxParser';
+import { getAllPosts } from "./mdxParser";
 
 export function getTagCounts() {
   const posts = getAllPosts();

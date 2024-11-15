@@ -9,7 +9,7 @@ type PostPageProps = {
   };
 };
 
-export default async function PostPage({ params }: PostPageProps) {
+export default async function PostDetailPage({ params }: PostPageProps) {
   const { slug } = params;
   const post = await getPostBySlug(slug);
   if (!post) {
@@ -23,8 +23,8 @@ export default async function PostPage({ params }: PostPageProps) {
       <h1>{frontMatter.title}</h1>
       <p>{frontMatter.date}</p>
       <div>
-        {frontMatter.tags?.map((tag: string, index: number) => (
-          <Link key={index} href={`/tags/${tag}`} passHref>
+        {frontMatter.tags?.map((tag: string) => (
+          <Link key={tag} href={`/tags/${tag}`} passHref>
             <span className="tag cursor-pointer">#{tag}</span>
           </Link>
         ))}

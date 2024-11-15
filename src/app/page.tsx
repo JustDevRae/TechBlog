@@ -13,8 +13,8 @@ export default function Home() {
               <h2>{post.frontMatter.title}</h2>
               <p>{post.frontMatter.date}</p>
               <div>
-                {post.frontMatter.tags.map((tag: string, index: number) => (
-                  <span key={index} className="tag">
+                {post.frontMatter.tags.map((tag: string) => (
+                  <span key={tag} className="tag">
                     {tag}
                   </span>
                 ))}
