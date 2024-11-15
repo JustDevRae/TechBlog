@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { getTagCounts } from "@/lib/tagUtils";
+import Link from 'next/link';
+import { getTagCounts } from '@/lib/tagUtils';
 
 export default function TagsPage() {
   const tagCounts = getTagCounts();

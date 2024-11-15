@@ -13,7 +13,7 @@ export async function getPostBySlug(slug: string) {
   return {
     slug,
     frontMatter: data,
-    content,
+    content: content,
   };
 }
 
@@ -28,7 +28,7 @@ export function getAllPosts() {
 
     return {
       slug,
-      frontMatter: data,
+      frontMatter: data
     };
   });
 }

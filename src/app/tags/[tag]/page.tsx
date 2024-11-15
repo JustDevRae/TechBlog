@@ -1,4 +1,4 @@
-import { getAllPosts } from "@/lib/mdxParser";
+import { getAllPosts } from '@/lib/mdxParser';
 
 type TagPageProps = {
   params: {

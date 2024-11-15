@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { getAllPosts } from "@/lib/mdxParser";
+import Link from 'next/link';
+import { getAllPosts } from '@/lib/mdxParser';
 
 export default function Home() {
   const posts = getAllPosts();

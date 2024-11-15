@@ -3,6 +3,8 @@
     "next",
     "airbnb",
     "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended",
     "plugin:react/recommended",
@@ -11,16 +13,20 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 2020
   },
   "plugins": [
     "@typescript-eslint",
     "react",
     "react-hooks",
     "import",
-    "jsx-a11y"
+    "jsx-a11y",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
