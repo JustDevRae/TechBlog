@@ -3,13 +3,16 @@
     "next",
     "airbnb",
     "airbnb-typescript",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 2020
   },
   "plugins": [
     "@typescript-eslint",
@@ -26,6 +29,11 @@
       "error",
       { "extensions": [".tsx", ".jsx"] }
     ],
-    "linebreak-style": ["error", "unix"]
+    "linebreak-style": ["error", "unix"],
+    "@typescript-eslint/no-throw-literal": "error",
+    "@typescript-eslint/quotes": ["error", "single"],
+    "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/brace-style": ["error", { "allowSingleLine": true }],
+    "@typescript-eslint/comma-dangle": ["error", "never"]
   }
 }
