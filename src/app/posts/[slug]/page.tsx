@@ -1,7 +1,7 @@
-import { getPostBySlug } from '@/lib/mdxParser';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import { getPostBySlug } from "@/lib/mdxParser";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
+import Link from "next/link";
 
 type PostPageProps = {
   params: {
