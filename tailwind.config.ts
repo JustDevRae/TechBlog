@@ -19,6 +19,11 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      screens: {
+        mobile: { max: "450px" }, // 450px 미만
+        tablet: { min: "450px", max: "1280px" }, // 600px 이상 1280px 미만
+        desktop: { min: "1280px" }, // 1280px 이상
+      },
     },
   },
   plugins: [tailwindcssAnimate],
