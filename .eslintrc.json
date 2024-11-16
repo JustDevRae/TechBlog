@@ -3,7 +3,6 @@
     "next",
     "airbnb",
     "airbnb-typescript",
-    "eslint:recommended",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended",
