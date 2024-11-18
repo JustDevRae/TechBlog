@@ -15,7 +15,7 @@ export default function Home() {
               <div>
                 {post.frontMatter.tags.map((tag: string) => (
                   <span key={tag} className="tag">
-                    {tag}
+                    # {tag}
                   </span>
                 ))}
               </div>
