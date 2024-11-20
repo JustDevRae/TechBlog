@@ -28,7 +28,7 @@ export default async function PostDetailPage({ params }: PostPageProps) {
         <div className="flex flex-wrap justify-center">
           {frontMatter.tags?.map((tag: string) => (
             <Link
-              className="mb-2 mr-2 mt-1 rounded-xl text-lg text-blue-500"
+              className="mr-2 rounded-xl text-lg text-blue-500"
               key={tag}
               href={`/tags/${tag}`}
               passHref
@@ -38,8 +38,7 @@ export default async function PostDetailPage({ params }: PostPageProps) {
           ))}
         </div>
       </header>
-
-      <section className="flex flex-col">
+      <section className="prose dark:prose-dark">
         <MDXRemote source={content} />
       </section>
     </article>
