@@ -19,19 +19,29 @@ export default async function PostDetailPage({ params }: PostPageProps) {
   const { frontMatter, content } = post;
 
   return (
-    <article>
-      <h1>{frontMatter.title}</h1>
-      <p>{frontMatter.date}</p>
-      <div>
-        {frontMatter.tags?.map((tag: string) => (
-          <Link key={tag} href={`/tags/${tag}`} passHref>
-            <span className="tag cursor-pointer">#{tag}</span>
-          </Link>
-        ))}
-      </div>
-      <div className="post-content">
+    <article className="mx-auto px-5">
+      <header className="flex flex-col items-center border-b-2 font-mono font-extrabold">
+        <h1 className="text-center text-6xl text-blue-500">
+          {frontMatter.title}
+        </h1>
+        <p className="text-lg text-gray-500">{frontMatter.date}</p>
+        <div className="flex flex-wrap justify-center">
+          {frontMatter.tags?.map((tag: string) => (
+            <Link
+              className="mb-2 mr-2 mt-1 rounded-xl text-lg text-blue-500"
+              key={tag}
+              href={`/tags/${tag}`}
+              passHref
+            >
+              #{tag}
+            </Link>
+          ))}
+        </div>
+      </header>
+
+      <section className="flex flex-col">
         <MDXRemote source={content} />
-      </div>
+      </section>
     </article>
   );
 }
