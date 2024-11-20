@@ -1,28 +1,24 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/mdxParser";
+import PostCard from "@/components/PostCard";
 
 export default function Home() {
   const posts = getAllPosts();
+
   return (
-    <div>
-      <h1>My Blog Posts</h1>
-      <ul>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="mb-6 text-3xl font-bold">My Blog Posts</h1>
+      <div className="grid grid-cols-1 gap-6">
         {posts.map((post) => (
-          <li key={post.slug} className="post-item">
-            <Link href={`/posts/${post.slug}`}>
-              <h2>{post.frontMatter.title}</h2>
-              <p>{post.frontMatter.date}</p>
-              <div>
-                {post.frontMatter.tags.map((tag: string) => (
-                  <span key={tag} className="tag">
-                    # {tag}
-                  </span>
-                ))}
-              </div>
-            </Link>
-          </li>
+          <PostCard
+            key={post.slug}
+            slug={post.slug}
+            title={post.frontMatter.title}
+            date={post.frontMatter.date}
+            tags={post.frontMatter.tags}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

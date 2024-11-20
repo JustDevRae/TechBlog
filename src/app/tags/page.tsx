@@ -16,7 +16,7 @@ export default function TagsPage() {
             key={tag}
             href={`/tags/${tag}`}
           >
-            <span>{tag}</span>
+            <span>#{tag}</span>
             <span className="text-black dark:text-gray-400">({count})</span>
           </Link>
         ))}
