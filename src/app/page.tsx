@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getAllPosts } from "@/lib/mdxParser";
 import PostCard from "@/components/PostCard";
 

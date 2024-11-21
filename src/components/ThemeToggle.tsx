@@ -16,6 +16,7 @@ export default function ThemeToggle() {
 
   return (
     <button
+      type="button"
       className="rounded-md bg-gray-200 p-2 hover:ring-2 hover:ring-gray-300 dark:bg-gray-200"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >

@@ -2,6 +2,7 @@
   "extends": [
     "next",
     "airbnb",
+    "airbnb/hooks",
     "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended",
@@ -27,6 +28,7 @@
     "react/react-in-jsx-scope": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/lines-between-class-members": "off",
     "@typescript-eslint/no-throw-literal": "off",
     "react/jsx-filename-extension": [
@@ -35,12 +37,7 @@
     ],
     "linebreak-style": ["error", "unix"],
     "semi": ["error", "always"],
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "lf"
-      }
-    ]
+    "prettier/prettier": ["error"]
   },
   "ignorePatterns": ["postcss.config.mjs"]
 }

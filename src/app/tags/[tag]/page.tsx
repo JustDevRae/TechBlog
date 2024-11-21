@@ -30,9 +30,9 @@ export default function TagPage({ params }: TagPageProps) {
               <h3>{post.frontMatter.title}</h3>
               <p>{post.frontMatter.date}</p>
               <div>
-                {post.frontMatter.tags.map((tag: string) => (
-                  <span key={tag} className="tag">
-                    # {tag}
+                {post.frontMatter.tags.map((taged: string) => (
+                  <span key={taged} className="tag">
+                    # {taged}
                   </span>
                 ))}
               </div>
