@@ -35,7 +35,7 @@
       "error",
       { "extensions": [".tsx", ".jsx"] }
     ],
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": "off",
     "semi": ["error", "always"],
     "prettier/prettier": ["error"]
   },

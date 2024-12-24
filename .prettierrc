@@ -1,6 +1,6 @@
 {
   "trailingComma": "es5",
-  "endOfLine": "lf",
+  "endOfLine": "auto",
   "semi": true,
   "plugins": ["prettier-plugin-tailwindcss"]
 }
